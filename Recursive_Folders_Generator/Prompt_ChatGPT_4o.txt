@@ -1,0 +1,40 @@
+recursive_directories_creator
+
+i want to write a fully functional python program, that will create multiple directories inside of the directory script stored. for input it should take how many recursive directories should be created, lists of folder names for each recursive level execpt last one, standart list.txt file (stored on the same directory) as a list of last recursion level folders. 
+
+Example Input : 2 2024,2025 Null (its going to take list.txt by default)
+list.txt file : jan , feb, mar
+
+Expected Output : Done! (created folders scheme like below)
+./
+ |__2024
+ |      |_____Jan
+ |      |_____Feb
+ |      |_____Mar
+ |__2025
+        |_____Jan
+        |_____Feb
+        |_____Mar
+
+------------------------------------------
+generator
+
+i also want to make a simple generator in python for that list.txt file, so that it generates and writes to file.txt either list of numbers , or list of letters. So for input should held 3 values : mode (n or l) start finish
+
+Example Input : n 1 4
+
+Example Output : Done! (wrote all the generated values each on new line to list.txt)
+list.txt file : 
+1
+2
+3
+4
+
+Example Input : l d f
+
+Example Output : Done! (wrote all the generated values each on new line to list.txt)
+list.txt file : 
+d
+e
+f
+4
