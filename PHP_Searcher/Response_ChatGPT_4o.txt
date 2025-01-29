@@ -1,0 +1,23 @@
+Here's a PHP script that searches for a given file name in the system and outputs the directory where it is located:
+```
+<?php
+function findFile($fileName, $searchDir = '/') {
+    $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($searchDir, RecursiveDirectoryIterator::SKIP_DOTS));
+    
+    foreach ($iterator as $file) {
+        if ($file->getFilename() === $fileName) {
+            return dirname($file->getPathname());
+        }
+    }
+    
+    return "File not found";
+}
+
+$fileName = readline("Enter file name: ");
+$directory = findFile($fileName, '/home/kali'); // Change this to the base directory you want to search in
+
+echo "File found in: $directory\n";
+?>
+
+```
+This script recursively searches for the specified file starting from the `/home/kali` directory. If found, it prints the directory where the file is located. You can change the search directory as needed. Let me know if you need modifications! 🚀
