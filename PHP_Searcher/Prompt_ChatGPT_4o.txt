@@ -1,0 +1,7 @@
+Code script in php, that will find given file name and output the directory file placed
+
+Example Input : file.txt
+
+in example, file.txt was placed in kali/home
+
+Example Output : /home/kali
